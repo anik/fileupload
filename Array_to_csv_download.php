@@ -49,10 +49,10 @@ function csv_generate($arr_condition, $data, $csv_header){
 				$i++;
 				if(!isset($key[$value])){  $raw_value = "";  }else{ $raw_value = $key[$value]; }
 					if($i==$count){
-						$csv_string .= $raw_value."\n";
+						$csv_string .= '"'.$raw_value.'"'."\n";
 					}
 					else{
-						$csv_string .= $raw_value.",";
+						$csv_string .= '"'.$raw_value.'"'.",";
 					}
 			}
 		}
